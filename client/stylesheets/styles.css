@@ -1,0 +1,106 @@
+/**{
+	border: 1px dotted red;
+}*/
+table,th,td{
+	/* for tables in both orders.html and customers.html */
+      border: 1px solid black;
+    }
+.destroy{
+	/* remove button in customers.html */
+	background: red;
+	border-radius: 5px;
+}
+.destroy a:link, .destroy a:visited, 
+.destroy a:hover, .destroy a:active {
+	color: white;
+	text-decoration: none;
+	/* this is just styling the link, not the button*/
+}
+#order{
+	/* order button on orders.html */
+	background: blue;
+	color: white;
+	border-radius: 5px;
+	margin-left: 170px;
+	margin-top: 5px;
+}
+#add{
+	/* add input on customers.html*/
+	background: blue;
+	color: white;
+	border-radius: 5px;
+}
+#quantity{
+	/* quantity option tag in orders.html*/
+	margin-left: 7px;
+	width: 145px;
+}
+#product{
+	/* product option tag in orders.html */
+	margin-left: 13px;
+	width: 145px;
+}
+#create{
+	/* create input on products.html*/
+	background: blue;
+	border-radius: 5px;
+	color: white;
+}
+#search{
+	/* div in products.html*/
+	width: 200px;
+	vertical-align: top;
+	margin-top: 10px;
+	display: inline-block;
+}
+#products{
+	/* div in prodcuts.html*/
+	vertical-align: top;
+	display: inline-block;
+	width: 850px;
+}
+#pics{
+	list-style: none;
+}
+#pics li{
+	display: inline-block;
+	width: 120px;
+	float: left;
+	text-align: center;
+	padding: 10px;
+}
+#pics img{
+	width: 120px;
+	height: 120px;
+}
+#leftDash{
+	padding-top: 20px;
+	display: inline-block;
+	width: 200px;
+}
+#mainDash{
+	display: inline-block;
+	vertical-align: top;
+	width: 850px;
+}
+#showMoreButton{
+	margin-left: 533px;
+}
+#recentOrders{
+	margin-left: 253px;
+}
+    #recentOrders li{
+       list-style-type: none;
+    }
+#showMoreOrders{
+	margin-left: 290px;
+}
+#newCustomers{
+	margin-left: 253px;
+}
+   #newCustomers li{
+   	  list-style-type: none;
+   }
+#showMoreCustomers{
+	margin-left: 290px;
+}

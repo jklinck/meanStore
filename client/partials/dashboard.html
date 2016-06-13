@@ -1,0 +1,43 @@
+<div ng-controller="ordersController">
+	<!-- filter to search for products -->
+	<div id='leftDash'>
+		<input name='search' type='text' ng-model='nameFilter' placeholder='Find a product'>
+	</div>
+
+	<!-- main dashboard area -->
+	<div id='mainDash'>
+		<ul id="pics" ng-model='newProduct'>
+			<li ng-repeat='product in products | limitTo: paginationLimit()'>
+				<img src='{{ product.imageUrl }}'>
+				<span ng-bind='product.name'></span><br>
+				<span ng-bind='product.quantity'></span>
+				<span> in stock</span>
+			</li>
+		</ul>
+	</div>
+	<div id='showMoreButton'>
+		<button ng-click='showMoreItems()'>Show more products</button>
+	</div>
+	<div id='recentOrders'>
+		<h3><u>Recent Orders</u></h3>
+		<ul>
+			<li ng-repeat='order in orders.slice().reverse() | limitTo: paginationLimit2()'>
+				<p><span ng-bind='order.customer'></span> purchased <span ng-bind='order.quantity'></span> <span ng-bind='order.product'></span>(s)</p>
+			</li>
+		</ul>
+	</div>
+	<div id='showMoreOrders'>
+		<button ng-click='showAllOrdersButton()'>Show all orders</button>
+	</div>
+	<div id='newCustomers'>
+		<h3><u>New Customers</u></h3>
+		<ul>
+			<li ng-repeat='customer in customers.slice().reverse()| limitTo: paginationLimit3()'>
+				<span ng-bind='customer.name'></span>
+			</li>
+		</ul>
+	</div>
+	<div id='showMoreCustomers'>
+		<button ng-click='showAllCustomersButton()'>Show all customers</button>
+	</div>
+</div>

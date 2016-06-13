@@ -1,0 +1,33 @@
+<div ng-controller='ordersController'>
+	<div id="search">
+		<input type="text" ng-model='nameFilter' placeholder='Find a product'><br>
+
+
+		<h3><strong><u>Add a new product</u></strong></h3>
+		<label>Name: </label><br>
+		<input type="text" ng-model='newProduct.name' placeholder="name" name='name'><br>
+		<label>Image (url): </lable><br>
+		<input type="text" ng-model='newProduct.imageUrl' placeholder="http://" name='imageUrl'><br>
+		<label>Description: </label><br>
+		<textarea name='description' ng-model='newProduct.description' placeholder='Describe the product'></textarea><br>
+		<label>Initial quantity</label><br>
+		<select name='quantity' ng-model='newProduct.quantity'>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="200">200</option>
+		</select><br>
+		<input id="create" ng-click='addProduct(newProduct)' type="submit" value="Create">
+	</div>
+	<div id="products">
+		<ul id="pics" ng-model='newProduct'>
+			<li ng-repeat='product in products | filter: nameFilter'>
+				<img src='{{ product.imageUrl }}'>
+				<span ng-bind='product.name'></span><br>
+				<span ng-bind='product.quantity'></span>
+				<span> in stock</span>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+
+<div ng-controller='ordersController'>
+    <h2><u>Add a new order</u></h2>
+    Customer: <select ng-model='new_order.customer' name='customer'>
+    			<option value=''>Choose a customer...</option>
+    			<option ng-repeat='customer in customers' value='{{ customer.name }}'>{{ customer.name }}</option>
+	</select><br>
+	Quantity: <select id='quantity' ng-model='new_order.quantity' name='quantity'>
+		<option value=''>Choose quantity...</option>
+    	<option value='1'>1</option>
+    	<option value='2'>2</option>
+    	<option value='3'>3</option>
+    	<option value='4'>4</option>
+    	<option value='5'>5</option>
+    	<option value='6'>6</option>
+    	<option value='7'>7</option>
+    	<option value='8'>8</option>
+    	<option value='9'>9</option>
+    	<option value='10'>10</option>
+	</select><br>
+	Product: <select id='product' ng-model='new_order.product' name='order'>
+		<option value=''>Choose a product...</option>
+		<option ng-repeat='product in products' value='{{ product.name }}' ng-bind='product.name'></option>
+	</select><br>
+	<button id='order' ng-click='addOrder(new_order)'>Order</button
+	><br></br>
+	<label id='search' for='search'>Search name: </label>
+    <input name='search' type='text' ng-model='nameFilter'><br></br>
+	<table>
+		<tr>
+			<th>Customer</th>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Date</th>
+		</tr>
+		<tr ng ng-repeat='order in orders | filter: nameFilter'>
+			<td ng-bind='order.customer'></td>
+			<td ng-bind='order.product'></td>
+			<td ng-bind='order.quantity'></td>
+			<td ng-bind='order.created_date.slice(0,10)'></td>
+		</tr>
+	</table>
+</div>
