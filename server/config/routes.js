@@ -1,5 +1,5 @@
-var customers = require('../controllers/back_cust_ctrlr.js');
-var orders = require('../controllers/back_orders_ctrlr.js');
+var customers = require('../controllers/backCustCtrlr.js');
+var orders = require('../controllers/backOrdersCtrlr.js');
 var products = require('../controllers/backProdCtrlr.js');
 
 module.exports = function(app) {

@@ -1,5 +1,5 @@
 custOrdersApp.factory('ordersFactory',function($http){
-		  var factory = {};
+      var factory = {};
       factory.getOrders = function(callback){
         $http.get('orderObjects').success(function(output){
           orders = output;

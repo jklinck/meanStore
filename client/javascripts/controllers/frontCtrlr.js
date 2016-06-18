@@ -22,7 +22,6 @@ custOrdersApp.controller('ordersController',function($scope,ordersFactory,produc
 
 
 
-
     // ******* CUSTOMER CONTROLLER ****************
 		// ******* CUSTOMER CONTROLLER ****************
 		customersFactory.getCustomers(function(data){
